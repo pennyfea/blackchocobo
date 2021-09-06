@@ -29,36 +29,36 @@ jobs:
            , build_blackchocobo: "DESTDIR=appdir ninja install; find appdir/"
            , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-linux-x86_64.tar.xz"
           }
-        - {
-            name: "MacOS-amd64"
-            , os: macos-latest
-            , QT_INST_DIR: /Users/runner
-            , ff7tkPrefix: /usr/local
-            , make_install_ff7tk: "sudo ninja install"
-            , install_ninja: "brew install ninja"
-            , build_blackchocobo: "ninja"
-            , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-macos.dmg"
-          }
-        - {
-            name: "Windows-x64", WIN_ARCH: "x64"
-            , os: windows-latest
-            , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
-            , ff7tkPrefix: "C:/ff7tk"
-            , make_install_ff7tk: "ninja install"
-            , install_ninja: "choco install ninja"
-            , build_blackchocobo: "ninja install"
-            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win64.zip && mv Black_Chocobo-*.exe Black_Chocobo-continuous-win64-installer.exe"
-          }
-        - {
-            name: "Windows-x86"
-            , os: windows-latest, WIN_ARCH: "amd64_x86"
-            , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
-            , ff7tkPrefix: "C:/ff7tk"
-            , make_install_ff7tk: "ninja install"
-            , install_ninja: "choco install ninja"
-            , build_blackchocobo: "ninja install"
-            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win32.zip && mv Black_Chocobo-*.exe Black_Chocobo-continuous-win32-installer.exe"
-          }
+#         - {
+#             name: "MacOS-amd64"
+#             , os: macos-latest
+#             , QT_INST_DIR: /Users/runner
+#             , ff7tkPrefix: /usr/local
+#             , make_install_ff7tk: "sudo ninja install"
+#             , install_ninja: "brew install ninja"
+#             , build_blackchocobo: "ninja"
+#             , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-macos.dmg"
+#           }
+#         - {
+#             name: "Windows-x64", WIN_ARCH: "x64"
+#             , os: windows-latest
+#             , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
+#             , ff7tkPrefix: "C:/ff7tk"
+#             , make_install_ff7tk: "ninja install"
+#             , install_ninja: "choco install ninja"
+#             , build_blackchocobo: "ninja install"
+#             , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win64.zip && mv Black_Chocobo-*.exe Black_Chocobo-continuous-win64-installer.exe"
+#           }
+#         - {
+#             name: "Windows-x86"
+#             , os: windows-latest, WIN_ARCH: "amd64_x86"
+#             , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
+#             , ff7tkPrefix: "C:/ff7tk"
+#             , make_install_ff7tk: "ninja install"
+#             , install_ninja: "choco install ninja"
+#             , build_blackchocobo: "ninja install"
+#             , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win32.zip && mv Black_Chocobo-*.exe Black_Chocobo-continuous-win32-installer.exe"
+#           }
     steps:
     - uses: actions/checkout@v2
 
