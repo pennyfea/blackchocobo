@@ -47,6 +47,7 @@ set ( blackchocobo_SRCS
     src/about.cpp
     src/options.cpp
     src/errbox.cpp
+    
     src/achievementdialog.cpp
     src/bcdialog.cpp
     src/bcsettings.cpp
