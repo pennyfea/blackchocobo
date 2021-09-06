@@ -60,6 +60,7 @@ add_subdirectory(deploy)
 add_subdirectory(lang)
 add_subdirectory(qhexedit)
 
+
 if(UNIX AND NOT APPLE)
     add_executable (blackchocobo ${blackchocobo_SRCS} ${RESOURCES})
     target_link_libraries (blackchocobo  Qt::Core Qt::Gui Qt::Widgets Qt::Xml Qt::Quick QHEXEDIT ff7tk::ff7tk ff7tk::ff7tkWidgets)
